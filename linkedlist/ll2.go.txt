@@ -1,0 +1,83 @@
+// package linkedlist
+
+// import "fmt"
+
+// var combMaps map[string]bool = map[string]bool{}
+
+// func combinationSum4(types []int, target int) int {
+// 	var totalsum int32
+
+// 	var allInts map[int]bool = map[string]bool{}
+
+// 	var min int = types[0]
+
+// 	var maxlength int = target / min
+
+// 	var newtypes []int = make([]int, 0)
+// 	newtypes = append(newtypes, 0)
+
+// 	for _, v := range types {
+// 		allInts[v] = true
+// 		if v < min {
+// 			min = v
+// 		}
+// 		newtypes = append(newtypes, v)
+// 	}
+
+// 	typesCount := len(newtypes)
+
+// 	allCombinations := factorial(typesCount+maxlength-1) / (factorial(maxlength) * factorial(typesCount-1))
+// 	combinations := make([][]int, 0)
+
+// 	for i := 0; i < allCombinations; i++ {
+// 		var combination []int = make([]int, maxlength)
+
+// 	}
+// }
+
+// func sliceToString(comboArr []int) string {
+// 	var s string
+// 	for _, v := range comboArr {
+// 		if v > 0 {
+// 			s = fmt.Sprintf("%s%s", s, v)
+// 		}
+// 	}
+// 	return s
+// }
+
+// func doesComboExist(combo string) bool {
+// 	_, ok := combMaps[combo]
+// 	return ok
+// }
+
+// func addCombo(combo string) {
+// 	exists := doesComboExist(combo)
+// 	if exists == false {
+// 		combMaps[combo] = true
+// 	}
+// }
+
+// func factorial(v int) int64 {
+// 	var product int64 = 1
+// 	if v > 0 {
+// 		for i := 1; i <= v; i++ {
+// 			product = product * int64(i)
+// 		}
+// 	} else {
+// 		return 0
+// 	}
+// 	return product
+// }
+
+// //0,1,2,3,4 [0,0,0,0]
+// /*
+// 	//fmt.Println(factorial(5))
+// 	m := 4
+// 	n := 5 //types
+// 	f := factorial(m + n - 1)
+// 	s := factorial(m) * factorial(n-1)
+// 	res := f / s
+// 	fmt.Println(res)
+// 	fmt.Println(f)
+// 	fmt.Println(s)
+//
