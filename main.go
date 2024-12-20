@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(slidingwindow.Run())
+	fmt.Println(slidingwindow.Run2())
 }
